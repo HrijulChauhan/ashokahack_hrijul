@@ -1,0 +1,279 @@
+/* [project]/src/app/(dashboard)/rescue-bags/page.module.css [app-client] (css) */
+.page-module__o_QBmG__container {
+  padding: var(--spacing-6);
+  max-width: 1400px;
+}
+
+.page-module__o_QBmG__sectionTitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  margin: 0 0 var(--spacing-4) 0;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-weight: 600;
+  display: flex;
+}
+
+.page-module__o_QBmG__filterTag {
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-3);
+  color: var(--color-accent);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  background: #b8e03f26;
+  font-weight: 500;
+  display: inline-flex;
+}
+
+.page-module__o_QBmG__filterTag button {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+}
+
+.page-module__o_QBmG__filterTag button:hover {
+  background: #fff3;
+}
+
+.page-module__o_QBmG__categorySection {
+  margin-bottom: var(--spacing-8);
+}
+
+.page-module__o_QBmG__categoryGrid {
+  gap: var(--spacing-4);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: grid;
+}
+
+.page-module__o_QBmG__categoryCard {
+  align-items: center;
+  gap: var(--spacing-3);
+  cursor: pointer;
+  border: 2px solid #0000;
+  display: flex;
+}
+
+.page-module__o_QBmG__categoryCard.page-module__o_QBmG__selected {
+  border-color: var(--color-accent);
+  background: #b8e03f0d;
+}
+
+.page-module__o_QBmG__categoryIcon {
+  font-size: 28px;
+}
+
+.page-module__o_QBmG__categoryInfo {
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__o_QBmG__categoryName {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__o_QBmG__categorySold {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.page-module__o_QBmG__categoryRevenue {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.page-module__o_QBmG__listingsSection {
+  margin-bottom: var(--spacing-8);
+}
+
+.page-module__o_QBmG__listingsHeader {
+  margin-bottom: var(--spacing-4);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__o_QBmG__availableCount {
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  background: #4ade8026;
+}
+
+.page-module__o_QBmG__listingsGrid {
+  gap: var(--spacing-5);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  display: grid;
+}
+
+.page-module__o_QBmG__bagCard {
+  gap: var(--spacing-4);
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__o_QBmG__bagHeader {
+  gap: var(--spacing-2);
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__o_QBmG__bagMerchant {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__o_QBmG__bagMerchant .page-module__o_QBmG__merchantName {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.page-module__o_QBmG__bagCategory {
+  font-size: var(--font-size-sm);
+  color: var(--color-pink);
+}
+
+.page-module__o_QBmG__bagBody {
+  flex: 1;
+}
+
+.page-module__o_QBmG__bagDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  margin: 0 0 var(--spacing-4) 0;
+  line-height: 1.5;
+}
+
+.page-module__o_QBmG__bagDetails {
+  gap: var(--spacing-6);
+  display: flex;
+}
+
+.page-module__o_QBmG__bagQuantity, .page-module__o_QBmG__bagPickup {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__o_QBmG__quantityLabel, .page-module__o_QBmG__pickupLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.page-module__o_QBmG__quantityValue, .page-module__o_QBmG__pickupValue {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__o_QBmG__bagFooter {
+  padding-top: var(--spacing-4);
+  border-top: 1px solid #ffffff0d;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__o_QBmG__bagPricing {
+  align-items: center;
+  gap: var(--spacing-2);
+  display: flex;
+}
+
+.page-module__o_QBmG__originalPrice {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  text-decoration: line-through;
+}
+
+.page-module__o_QBmG__salePrice {
+  font-size: var(--font-size-xl);
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.page-module__o_QBmG__savingsTag {
+  padding: var(--spacing-1) var(--spacing-2);
+  color: var(--color-pink);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  background: #e88bc326;
+  font-weight: 600;
+}
+
+.page-module__o_QBmG__emptyState {
+  text-align: center;
+  padding: var(--spacing-12);
+  color: var(--color-gray-500);
+  grid-column: 1 / -1;
+}
+
+.page-module__o_QBmG__priceSection {
+  margin-bottom: var(--spacing-6);
+}
+
+.page-module__o_QBmG__priceGrid {
+  gap: var(--spacing-4);
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+@media (max-width: 768px) {
+  .page-module__o_QBmG__priceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.page-module__o_QBmG__priceCard {
+  align-items: center;
+  gap: var(--spacing-3);
+  display: flex;
+}
+
+.page-module__o_QBmG__priceIndicator {
+  border-radius: var(--radius-full);
+  width: 4px;
+  height: 40px;
+}
+
+.page-module__o_QBmG__priceIndicator.page-module__o_QBmG__success {
+  background: var(--color-success);
+}
+
+.page-module__o_QBmG__priceIndicator.page-module__o_QBmG__info {
+  background: var(--color-info);
+}
+
+.page-module__o_QBmG__priceIndicator.page-module__o_QBmG__warning {
+  background: var(--color-warning);
+}
+
+.page-module__o_QBmG__priceIndicator.page-module__o_QBmG__pink {
+  background: var(--color-pink);
+}
+
+.page-module__o_QBmG__priceName {
+  color: var(--color-white);
+  font-weight: 500;
+  display: block;
+}
+
+.page-module__o_QBmG__priceRange {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  display: block;
+}
+
+/*# sourceMappingURL=src_app_%28dashboard%29_rescue-bags_page_module_css_bad6b30c._.single.css.map*/

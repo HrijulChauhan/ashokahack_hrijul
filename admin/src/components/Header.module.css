@@ -1,0 +1,128 @@
+.header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-6);
+    background: var(--color-primary-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+    margin: 0;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.search {
+    width: 280px;
+}
+
+.iconBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    color: var(--color-gray-400);
+    transition: all var(--transition-fast);
+}
+
+.iconBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-white);
+}
+
+.notificationDot {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-pink);
+    border: 2px solid var(--color-primary-bg);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.profile:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-leaf-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--color-primary-bg);
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profileName {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.profileRole {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-400);
+}
+
+.profile svg {
+    color: var(--color-gray-500);
+    margin-left: var(--spacing-1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search {
+        display: none;
+    }
+
+    .profileInfo {
+        display: none;
+    }
+}

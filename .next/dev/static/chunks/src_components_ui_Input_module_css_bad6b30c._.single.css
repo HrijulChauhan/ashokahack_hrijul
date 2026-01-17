@@ -1,0 +1,93 @@
+/* [project]/src/components/ui/Input.module.css [app-client] (css) */
+.Input-module__5jsJuW__wrapper {
+  gap: var(--spacing-2);
+  flex-direction: column;
+  display: flex;
+}
+
+.Input-module__5jsJuW__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-300);
+  font-weight: 500;
+}
+
+.Input-module__5jsJuW__inputContainer {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.Input-module__5jsJuW__input {
+  width: 100%;
+  height: 44px;
+  padding: 0 var(--spacing-4);
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  background: var(--color-primary-bg-dark);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  border: 1px solid #ffffff1a;
+}
+
+.Input-module__5jsJuW__input::placeholder {
+  color: var(--color-gray-500);
+}
+
+.Input-module__5jsJuW__input:hover {
+  border-color: #fff3;
+}
+
+.Input-module__5jsJuW__input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px #b8e03f26;
+}
+
+.Input-module__5jsJuW__hasLeftIcon {
+  padding-left: var(--spacing-10);
+}
+
+.Input-module__5jsJuW__hasRightIcon {
+  padding-right: var(--spacing-10);
+}
+
+.Input-module__5jsJuW__leftIcon, .Input-module__5jsJuW__rightIcon {
+  color: var(--color-gray-500);
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.Input-module__5jsJuW__leftIcon {
+  left: var(--spacing-3);
+}
+
+.Input-module__5jsJuW__rightIcon {
+  right: var(--spacing-3);
+}
+
+.Input-module__5jsJuW__hasError .Input-module__5jsJuW__input {
+  border-color: var(--color-error);
+}
+
+.Input-module__5jsJuW__hasError .Input-module__5jsJuW__input:focus {
+  box-shadow: 0 0 0 3px #f8717126;
+}
+
+.Input-module__5jsJuW__error {
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+}
+
+.Input-module__5jsJuW__input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2'%3E%3Cpath d='M18 6L6 18M6 6l12 12'/%3E%3C/svg%3E");
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+}
+
+/*# sourceMappingURL=src_components_ui_Input_module_css_bad6b30c._.single.css.map*/

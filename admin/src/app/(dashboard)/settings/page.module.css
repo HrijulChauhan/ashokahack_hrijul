@@ -1,0 +1,364 @@
+.container {
+    padding: var(--spacing-6);
+    max-width: 1000px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab {
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-gray-400);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all var(--transition-fast);
+}
+
+.tab:hover {
+    color: var(--color-white);
+}
+
+.tab.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* Tab Content */
+.tabContent {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Settings Card */
+.settingsCard {
+    margin-bottom: var(--spacing-5);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.cardTitle {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-4) 0;
+}
+
+.cardHeader .cardTitle {
+    margin: 0;
+}
+
+.cardDescription {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+    margin: 0 0 var(--spacing-4) 0;
+}
+
+/* Form Grid */
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-4);
+}
+
+@media (max-width: 640px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.helperText {
+    margin-top: var(--spacing-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+}
+
+/* Select */
+.selectWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-gray-300);
+}
+
+.select {
+    height: 44px;
+    padding: 0 var(--spacing-4);
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    background: var(--color-primary-bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Price Slabs */
+.priceSlabs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
+}
+
+.priceSlab {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-3);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-lg);
+}
+
+.slabName {
+    width: 100px;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.slabRange {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    flex: 1;
+    color: var(--color-gray-500);
+}
+
+.slabInput {
+    width: 100px;
+}
+
+.deleteBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--color-gray-500);
+    transition: all var(--transition-fast);
+}
+
+.deleteBtn:hover {
+    background: rgba(248, 113, 113, 0.1);
+    color: var(--color-error);
+}
+
+.addBtn {
+    align-self: flex-start;
+}
+
+/* Toggle List */
+.toggleList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.toggleItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-3) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.toggleItem:last-child {
+    border-bottom: none;
+}
+
+.toggleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.toggleLabel {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.toggleDescription {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+}
+
+/* Toggle Switch */
+.toggle {
+    position: relative;
+    width: 48px;
+    height: 26px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-primary-bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--color-gray-400);
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.toggle input:checked+.slider {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.toggle input:checked+.slider:before {
+    transform: translateX(22px);
+    background-color: var(--color-primary-bg);
+}
+
+/* Admin List */
+.adminList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.adminItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-lg);
+}
+
+.adminAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-leaf-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--color-primary-bg);
+    flex-shrink: 0;
+}
+
+.adminInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.adminName {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.adminEmail {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+}
+
+.adminRole {
+    min-width: 100px;
+}
+
+.roleBadge {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-3);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-400);
+}
+
+.roleBadge.super {
+    background: rgba(184, 224, 63, 0.15);
+    color: var(--color-accent);
+}
+
+.adminLastLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: right;
+}
+
+.lastLoginLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-600);
+}
+
+.moreBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--color-gray-500);
+    transition: all var(--transition-fast);
+}
+
+.moreBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-3);
+    margin-top: var(--spacing-6);
+}

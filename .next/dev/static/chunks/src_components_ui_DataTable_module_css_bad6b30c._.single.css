@@ -1,0 +1,123 @@
+/* [project]/src/components/ui/DataTable.module.css [app-client] (css) */
+.DataTable-module__7dcBQG__container {
+  border-radius: var(--radius-xl);
+  background: var(--color-primary-bg-light);
+  border: 1px solid #ffffff0d;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.DataTable-module__7dcBQG__table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+.DataTable-module__7dcBQG__table th {
+  text-align: left;
+  padding: var(--spacing-4) var(--spacing-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  background: var(--color-primary-bg-dark);
+  white-space: nowrap;
+  border-bottom: 1px solid #ffffff0d;
+  font-weight: 600;
+}
+
+.DataTable-module__7dcBQG__table th:first-child {
+  border-radius: var(--radius-xl) 0 0 0;
+}
+
+.DataTable-module__7dcBQG__table th:last-child {
+  border-radius: 0 var(--radius-xl) 0 0;
+}
+
+.DataTable-module__7dcBQG__sortable {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.DataTable-module__7dcBQG__sortable:hover {
+  color: var(--color-accent);
+}
+
+.DataTable-module__7dcBQG__sortIcon {
+  margin-left: var(--spacing-1);
+  opacity: .5;
+  vertical-align: middle;
+}
+
+.DataTable-module__7dcBQG__table td {
+  padding: var(--spacing-4) var(--spacing-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  vertical-align: middle;
+  border-bottom: 1px solid #ffffff08;
+}
+
+.DataTable-module__7dcBQG__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.DataTable-module__7dcBQG__table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 var(--radius-xl);
+}
+
+.DataTable-module__7dcBQG__table tbody tr:last-child td:last-child {
+  border-radius: 0 0 var(--radius-xl) 0;
+}
+
+.DataTable-module__7dcBQG__clickable {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.DataTable-module__7dcBQG__clickable:hover {
+  background: #ffffff08;
+}
+
+.DataTable-module__7dcBQG__loading {
+  padding: var(--spacing-12);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--color-gray-400);
+  flex-direction: column;
+  display: flex;
+}
+
+.DataTable-module__7dcBQG__spinner {
+  border: 3px solid var(--color-primary-bg-dark);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: .8s linear infinite DataTable-module__7dcBQG__spin;
+}
+
+@keyframes DataTable-module__7dcBQG__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.DataTable-module__7dcBQG__empty {
+  padding: var(--spacing-12);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--color-gray-500);
+  flex-direction: column;
+  display: flex;
+}
+
+.DataTable-module__7dcBQG__empty svg {
+  opacity: .5;
+}
+
+.DataTable-module__7dcBQG__empty p {
+  font-size: var(--font-size-sm);
+}
+
+/*# sourceMappingURL=src_components_ui_DataTable_module_css_bad6b30c._.single.css.map*/

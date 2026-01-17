@@ -1,0 +1,187 @@
+/* [project]/src/components/ui/Modal.module.css [app-client] (css) */
+.Modal-module__7LRQSW__overlay {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  padding: var(--spacing-4);
+  z-index: 1000;
+  background: #0009;
+  justify-content: center;
+  align-items: center;
+  animation: .2s Modal-module__7LRQSW__fadeIn;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+@keyframes Modal-module__7LRQSW__fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.Modal-module__7LRQSW__modal {
+  background: var(--color-primary-bg-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid #ffffff1a;
+  flex-direction: column;
+  max-height: 90vh;
+  animation: .2s Modal-module__7LRQSW__slideUp;
+  display: flex;
+  overflow: hidden;
+}
+
+@keyframes Modal-module__7LRQSW__slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Modal-module__7LRQSW__sm {
+  width: 100%;
+  max-width: 400px;
+}
+
+.Modal-module__7LRQSW__md {
+  width: 100%;
+  max-width: 550px;
+}
+
+.Modal-module__7LRQSW__lg {
+  width: 100%;
+  max-width: 800px;
+}
+
+.Modal-module__7LRQSW__header {
+  padding: var(--spacing-5);
+  border-bottom: 1px solid #ffffff0d;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Modal-module__7LRQSW__title {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  margin: 0;
+  font-weight: 600;
+}
+
+.Modal-module__7LRQSW__closeButton {
+  border-radius: var(--radius-md);
+  width: 32px;
+  height: 32px;
+  color: var(--color-gray-400);
+  transition: all var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Modal-module__7LRQSW__closeButton:hover {
+  color: var(--color-white);
+  background: #ffffff1a;
+}
+
+.Modal-module__7LRQSW__content {
+  padding: var(--spacing-5);
+  overflow-y: auto;
+}
+
+.Modal-module__7LRQSW__confirmContent {
+  gap: var(--spacing-5);
+  flex-direction: column;
+  display: flex;
+}
+
+.Modal-module__7LRQSW__confirmMessage {
+  color: var(--color-gray-300);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.Modal-module__7LRQSW__confirmActions {
+  gap: var(--spacing-3);
+  justify-content: flex-end;
+  display: flex;
+}
+
+.Modal-module__7LRQSW__cancelButton {
+  height: 40px;
+  padding: 0 var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  background: none;
+  border: 1px solid #ffffff1a;
+  font-weight: 500;
+}
+
+.Modal-module__7LRQSW__cancelButton:hover:not(:disabled) {
+  background: #ffffff0d;
+  border-color: #fff3;
+}
+
+.Modal-module__7LRQSW__confirmButton {
+  height: 40px;
+  padding: 0 var(--spacing-5);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  font-weight: 600;
+  display: flex;
+}
+
+.Modal-module__7LRQSW__confirmButton.Modal-module__7LRQSW__primary {
+  background: var(--color-accent);
+  color: var(--color-primary-bg);
+}
+
+.Modal-module__7LRQSW__confirmButton.Modal-module__7LRQSW__primary:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.Modal-module__7LRQSW__confirmButton.Modal-module__7LRQSW__danger {
+  background: var(--color-error);
+  color: var(--color-white);
+}
+
+.Modal-module__7LRQSW__confirmButton.Modal-module__7LRQSW__danger:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.Modal-module__7LRQSW__confirmButton:disabled, .Modal-module__7LRQSW__cancelButton:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.Modal-module__7LRQSW__spinner {
+  border: 2px solid;
+  border-right-color: #0000;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: .75s linear infinite Modal-module__7LRQSW__spin;
+}
+
+@keyframes Modal-module__7LRQSW__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=src_components_ui_Modal_module_css_bad6b30c._.single.css.map*/

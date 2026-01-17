@@ -1,0 +1,279 @@
+/* [project]/src/app/(dashboard)/page.module.css [app-client] (css) */
+.page-module__zd1WPq__container {
+  padding: var(--spacing-6);
+  max-width: 1400px;
+}
+
+.page-module__zd1WPq__statsGrid {
+  gap: var(--spacing-5);
+  margin-bottom: var(--spacing-6);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: grid;
+}
+
+.page-module__zd1WPq__chartsSection {
+  gap: var(--spacing-5);
+  margin-bottom: var(--spacing-6);
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .page-module__zd1WPq__chartsSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-module__zd1WPq__chartCard {
+  min-height: 320px;
+}
+
+.page-module__zd1WPq__chartHeader {
+  margin-bottom: var(--spacing-5);
+}
+
+.page-module__zd1WPq__chartTitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  margin: 0;
+  font-weight: 600;
+}
+
+.page-module__zd1WPq__chart {
+  align-items: flex-end;
+  height: 220px;
+  display: flex;
+}
+
+.page-module__zd1WPq__barChart {
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--spacing-3);
+  width: 100%;
+  height: 100%;
+  padding-bottom: var(--spacing-6);
+  display: flex;
+}
+
+.page-module__zd1WPq__barContainer {
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-2);
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  display: flex;
+}
+
+.page-module__zd1WPq__bar {
+  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-leaf-dark) 100%);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  width: 100%;
+  max-width: 40px;
+  min-height: 4px;
+  transition: height .5s;
+}
+
+.page-module__zd1WPq__bar:hover {
+  background: var(--color-accent);
+}
+
+.page-module__zd1WPq__barLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  text-transform: uppercase;
+}
+
+.page-module__zd1WPq__categoryList {
+  gap: var(--spacing-4);
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__zd1WPq__categoryItem {
+  gap: var(--spacing-2);
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__zd1WPq__categoryInfo {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__zd1WPq__categoryName {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__zd1WPq__categoryValue {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+}
+
+.page-module__zd1WPq__categoryBar {
+  background: var(--color-primary-bg-dark);
+  border-radius: var(--radius-full);
+  height: 8px;
+  overflow: hidden;
+}
+
+.page-module__zd1WPq__categoryProgress {
+  border-radius: var(--radius-full);
+  height: 100%;
+  transition: width .5s;
+}
+
+.page-module__zd1WPq__color-accent {
+  background: var(--color-accent);
+}
+
+.page-module__zd1WPq__color-pink {
+  background: var(--color-pink);
+}
+
+.page-module__zd1WPq__color-success {
+  background: var(--color-success);
+}
+
+.page-module__zd1WPq__color-info {
+  background: var(--color-info);
+}
+
+.page-module__zd1WPq__color-warning {
+  background: var(--color-warning);
+}
+
+.page-module__zd1WPq__color-leaf {
+  background: var(--color-leaf-dark);
+}
+
+.page-module__zd1WPq__recentSection {
+  margin-bottom: var(--spacing-6);
+}
+
+.page-module__zd1WPq__sectionHeader {
+  padding: var(--spacing-5);
+  border-bottom: 1px solid #ffffff0d;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__zd1WPq__sectionTitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  margin: 0;
+  font-weight: 600;
+}
+
+.page-module__zd1WPq__viewAll {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+  font-weight: 500;
+}
+
+.page-module__zd1WPq__viewAll:hover {
+  color: var(--color-accent-hover);
+}
+
+.page-module__zd1WPq__ordersList {
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__zd1WPq__orderItem {
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-5);
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid #ffffff08;
+  grid-template-columns: 2fr 1.5fr auto;
+  align-items: center;
+  display: grid;
+}
+
+.page-module__zd1WPq__orderItem:last-child {
+  border-bottom: none;
+}
+
+.page-module__zd1WPq__orderItem:hover {
+  background: #ffffff05;
+}
+
+.page-module__zd1WPq__orderInfo {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__zd1WPq__orderConsumer {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__zd1WPq__orderMerchant {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.page-module__zd1WPq__orderDetails {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__zd1WPq__orderCategory {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-300);
+}
+
+.page-module__zd1WPq__orderPrice {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.page-module__zd1WPq__orderStatus {
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.page-module__zd1WPq__orderStatus.page-module__zd1WPq__reserved {
+  color: var(--color-warning);
+  background: #fbbf2426;
+}
+
+.page-module__zd1WPq__orderStatus.page-module__zd1WPq__confirmed {
+  color: var(--color-info);
+  background: #60a5fa26;
+}
+
+.page-module__zd1WPq__orderStatus.page-module__zd1WPq__picked_up {
+  color: var(--color-success);
+  background: #4ade8026;
+}
+
+.page-module__zd1WPq__orderStatus.page-module__zd1WPq__cancelled, .page-module__zd1WPq__orderStatus.page-module__zd1WPq__no_show {
+  color: var(--color-error);
+  background: #f8717126;
+}
+
+@media (max-width: 768px) {
+  .page-module__zd1WPq__orderItem {
+    gap: var(--spacing-2);
+    grid-template-columns: 1fr;
+  }
+
+  .page-module__zd1WPq__orderStatus {
+    justify-self: start;
+  }
+}
+
+/*# sourceMappingURL=src_app_%28dashboard%29_page_module_css_bad6b30c._.single.css.map*/

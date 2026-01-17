@@ -1,0 +1,210 @@
+.container {
+    padding: var(--spacing-6);
+    max-width: 1400px;
+}
+
+/* Status Filters */
+.statusFilters {
+    display: flex;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-6);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-2);
+}
+
+.statusFilter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: var(--color-primary-bg-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-gray-400);
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+}
+
+.statusFilter:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+}
+
+.statusFilter.active {
+    background: rgba(184, 224, 63, 0.15);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.statusFilter.reserved.active {
+    background: rgba(251, 191, 36, 0.15);
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+}
+
+.statusFilter.confirmed.active {
+    background: rgba(96, 165, 250, 0.15);
+    border-color: var(--color-info);
+    color: var(--color-info);
+}
+
+.statusFilter.picked_up.active {
+    background: rgba(74, 222, 128, 0.15);
+    border-color: var(--color-success);
+    color: var(--color-success);
+}
+
+.statusFilter.cancelled.active {
+    background: rgba(248, 113, 113, 0.15);
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+
+.count {
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+}
+
+/* Today's Summary */
+.todaySummary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+}
+
+@media (max-width: 1024px) {
+    .todaySummary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .todaySummary {
+        grid-template-columns: 1fr;
+    }
+}
+
+.summaryCard {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.summaryIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    background: rgba(232, 139, 195, 0.15);
+    color: var(--color-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.summaryIcon.success {
+    background: rgba(74, 222, 128, 0.15);
+    color: var(--color-success);
+}
+
+.summaryIcon.warning {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--color-warning);
+}
+
+.summaryIcon.accent {
+    background: rgba(184, 224, 63, 0.15);
+    color: var(--color-accent);
+}
+
+.summaryContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.summaryLabel {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+}
+
+.summaryValue {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+/* Table Cells */
+.orderId {
+    font-family: monospace;
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+}
+
+.personCell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.personName {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.bagCategory {
+    font-size: var(--font-size-xs);
+    color: var(--color-pink);
+}
+
+.timeCell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.time {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.date {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+}
+
+.pickupCode {
+    font-family: monospace;
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-2);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    color: var(--color-gray-300);
+}
+
+.amount {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Actions */
+.actionBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: var(--color-gray-400);
+    transition: all var(--transition-fast);
+}
+
+.actionBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}

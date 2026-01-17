@@ -1,0 +1,111 @@
+/* [project]/src/components/ui/Card.module.css [app-client] (css) */
+.Card-module__b6YjYG__card {
+  background: var(--color-primary-bg-light);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-fast);
+  border: 1px solid #ffffff0d;
+}
+
+.Card-module__b6YjYG__hover:hover {
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  border-color: #ffffff1a;
+  transform: translateY(-2px);
+}
+
+.Card-module__b6YjYG__padding-none {
+  padding: 0;
+}
+
+.Card-module__b6YjYG__padding-sm {
+  padding: var(--spacing-3);
+}
+
+.Card-module__b6YjYG__padding-md {
+  padding: var(--spacing-5);
+}
+
+.Card-module__b6YjYG__padding-lg {
+  padding: var(--spacing-8);
+}
+
+.Card-module__b6YjYG__statCard {
+  gap: var(--spacing-3);
+  flex-direction: column;
+  min-width: 200px;
+  display: flex;
+}
+
+.Card-module__b6YjYG__statHeader {
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.Card-module__b6YjYG__statTitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  font-weight: 500;
+}
+
+.Card-module__b6YjYG__statIcon {
+  border-radius: var(--radius-lg);
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.Card-module__b6YjYG__icon-accent {
+  color: var(--color-accent);
+  background: #b8e03f26;
+}
+
+.Card-module__b6YjYG__icon-pink {
+  color: var(--color-pink);
+  background: #e88bc326;
+}
+
+.Card-module__b6YjYG__icon-success {
+  color: var(--color-success);
+  background: #4ade8026;
+}
+
+.Card-module__b6YjYG__icon-warning {
+  color: var(--color-warning);
+  background: #fbbf2426;
+}
+
+.Card-module__b6YjYG__icon-info {
+  color: var(--color-info);
+  background: #60a5fa26;
+}
+
+.Card-module__b6YjYG__statValue {
+  font-size: var(--font-size-3xl);
+  color: var(--color-white);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.Card-module__b6YjYG__statChange {
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  display: flex;
+}
+
+.Card-module__b6YjYG__positive {
+  color: var(--color-success);
+}
+
+.Card-module__b6YjYG__negative {
+  color: var(--color-error);
+}
+
+.Card-module__b6YjYG__changeLabel {
+  color: var(--color-gray-500);
+}
+
+/*# sourceMappingURL=src_components_ui_Card_module_css_bad6b30c._.single.css.map*/

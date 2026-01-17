@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/(dashboard)/layout.module.css"],"sourcesContent":[".layout {\n    display: flex;\n    min-height: 100vh;\n}\n\n.main {\n    flex: 1;\n    margin-left: var(--sidebar-width);\n    min-height: 100vh;\n    background: var(--color-primary-bg);\n    transition: margin-left var(--transition-normal);\n}\n\n/* When sidebar is collapsed */\n:global(.sidebar.collapsed)+.main {\n    margin-left: 72px;\n}\n\n@media (max-width: 768px) {\n    .main {\n        margin-left: 0;\n    }\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;AASA;;;;AAIA;EACI"}}]
+}

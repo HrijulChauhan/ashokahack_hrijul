@@ -1,0 +1,107 @@
+/* [project]/src/components/ui/Button.module.css [app-client] (css) */
+.Button-module__8RiFmG__button {
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-2);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.Button-module__8RiFmG__button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.Button-module__8RiFmG__primary {
+  background: var(--color-accent);
+  color: var(--color-primary-bg);
+}
+
+.Button-module__8RiFmG__primary:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.Button-module__8RiFmG__primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.Button-module__8RiFmG__secondary {
+  background: var(--color-primary-bg-light);
+  color: var(--color-white);
+  border: 1px solid var(--color-leaf-dark);
+}
+
+.Button-module__8RiFmG__secondary:hover:not(:disabled) {
+  background: var(--color-leaf-dark);
+  transform: translateY(-1px);
+}
+
+.Button-module__8RiFmG__danger {
+  background: var(--color-error);
+  color: var(--color-white);
+}
+
+.Button-module__8RiFmG__danger:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.Button-module__8RiFmG__ghost {
+  color: var(--color-white);
+  background: none;
+}
+
+.Button-module__8RiFmG__ghost:hover:not(:disabled) {
+  background: #ffffff1a;
+}
+
+.Button-module__8RiFmG__sm {
+  height: 32px;
+  padding: 0 var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+.Button-module__8RiFmG__md {
+  height: 40px;
+  padding: 0 var(--spacing-4);
+  font-size: var(--font-size-base);
+}
+
+.Button-module__8RiFmG__lg {
+  height: 48px;
+  padding: 0 var(--spacing-6);
+  font-size: var(--font-size-lg);
+}
+
+.Button-module__8RiFmG__fullWidth {
+  width: 100%;
+}
+
+.Button-module__8RiFmG__icon {
+  align-items: center;
+  display: inline-flex;
+}
+
+.Button-module__8RiFmG__spinner {
+  border: 2px solid;
+  border-right-color: #0000;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: .75s linear infinite Button-module__8RiFmG__spin;
+}
+
+@keyframes Button-module__8RiFmG__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=src_components_ui_Button_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,209 @@
+/* [project]/src/app/(dashboard)/orders/page.module.css [app-client] (css) */
+.page-module__PO_kTG__container {
+  padding: var(--spacing-6);
+  max-width: 1400px;
+}
+
+.page-module__PO_kTG__statusFilters {
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-2);
+  display: flex;
+  overflow-x: auto;
+}
+
+.page-module__PO_kTG__statusFilter {
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-primary-bg-light);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  border: 1px solid #ffffff1a;
+  font-weight: 500;
+  display: flex;
+}
+
+.page-module__PO_kTG__statusFilter:hover {
+  color: var(--color-white);
+  border-color: #fff3;
+}
+
+.page-module__PO_kTG__statusFilter.page-module__PO_kTG__active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: #b8e03f26;
+}
+
+.page-module__PO_kTG__statusFilter.page-module__PO_kTG__reserved.page-module__PO_kTG__active {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+  background: #fbbf2426;
+}
+
+.page-module__PO_kTG__statusFilter.page-module__PO_kTG__confirmed.page-module__PO_kTG__active {
+  border-color: var(--color-info);
+  color: var(--color-info);
+  background: #60a5fa26;
+}
+
+.page-module__PO_kTG__statusFilter.page-module__PO_kTG__picked_up.page-module__PO_kTG__active {
+  border-color: var(--color-success);
+  color: var(--color-success);
+  background: #4ade8026;
+}
+
+.page-module__PO_kTG__statusFilter.page-module__PO_kTG__cancelled.page-module__PO_kTG__active {
+  border-color: var(--color-error);
+  color: var(--color-error);
+  background: #f8717126;
+}
+
+.page-module__PO_kTG__count {
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  background: #ffffff1a;
+  padding: 2px 8px;
+}
+
+.page-module__PO_kTG__todaySummary {
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .page-module__PO_kTG__todaySummary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-module__PO_kTG__todaySummary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-module__PO_kTG__summaryCard {
+  align-items: center;
+  gap: var(--spacing-4);
+  display: flex;
+}
+
+.page-module__PO_kTG__summaryIcon {
+  border-radius: var(--radius-lg);
+  width: 48px;
+  height: 48px;
+  color: var(--color-pink);
+  background: #e88bc326;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__PO_kTG__summaryIcon.page-module__PO_kTG__success {
+  color: var(--color-success);
+  background: #4ade8026;
+}
+
+.page-module__PO_kTG__summaryIcon.page-module__PO_kTG__warning {
+  color: var(--color-warning);
+  background: #fbbf2426;
+}
+
+.page-module__PO_kTG__summaryIcon.page-module__PO_kTG__accent {
+  color: var(--color-accent);
+  background: #b8e03f26;
+}
+
+.page-module__PO_kTG__summaryContent {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__PO_kTG__summaryLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+}
+
+.page-module__PO_kTG__summaryValue {
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.page-module__PO_kTG__orderId {
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+}
+
+.page-module__PO_kTG__personCell {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__PO_kTG__personName {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__PO_kTG__bagCategory {
+  font-size: var(--font-size-xs);
+  color: var(--color-pink);
+}
+
+.page-module__PO_kTG__timeCell {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__PO_kTG__time {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__PO_kTG__date {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.page-module__PO_kTG__pickupCode {
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-md);
+  color: var(--color-gray-300);
+  background: #ffffff0d;
+}
+
+.page-module__PO_kTG__amount {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.page-module__PO_kTG__actionBtn {
+  border-radius: var(--radius-md);
+  width: 32px;
+  height: 32px;
+  color: var(--color-gray-400);
+  transition: all var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__PO_kTG__actionBtn:hover {
+  color: var(--color-white);
+  background: #ffffff1a;
+}
+
+/*# sourceMappingURL=src_app_%28dashboard%29_orders_page_module_css_bad6b30c._.single.css.map*/

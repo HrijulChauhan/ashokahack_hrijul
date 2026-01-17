@@ -1,0 +1,282 @@
+.container {
+    padding: var(--spacing-6);
+    max-width: 1400px;
+}
+
+.sectionTitle {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-4) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.filterTag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-1) var(--spacing-3);
+    background: rgba(184, 224, 63, 0.15);
+    color: var(--color-accent);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.filterTag button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.filterTag button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Category Section */
+.categorySection {
+    margin-bottom: var(--spacing-8);
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-4);
+}
+
+.categoryCard {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.categoryCard.selected {
+    border-color: var(--color-accent);
+    background: rgba(184, 224, 63, 0.05);
+}
+
+.categoryIcon {
+    font-size: 28px;
+}
+
+.categoryInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.categoryName {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.categorySold {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+}
+
+.categoryRevenue {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* Listings Section */
+.listingsSection {
+    margin-bottom: var(--spacing-8);
+}
+
+.listingsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.availableCount {
+    font-size: var(--font-size-sm);
+    color: var(--color-success);
+    padding: var(--spacing-1) var(--spacing-3);
+    background: rgba(74, 222, 128, 0.15);
+    border-radius: var(--radius-full);
+}
+
+.listingsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-5);
+}
+
+.bagCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.bagHeader {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.bagMerchant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bagMerchant .merchantName {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.bagCategory {
+    font-size: var(--font-size-sm);
+    color: var(--color-pink);
+}
+
+.bagBody {
+    flex: 1;
+}
+
+.bagDescription {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+    margin: 0 0 var(--spacing-4) 0;
+    line-height: 1.5;
+}
+
+.bagDetails {
+    display: flex;
+    gap: var(--spacing-6);
+}
+
+.bagQuantity,
+.bagPickup {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.quantityLabel,
+.pickupLabel {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+}
+
+.quantityValue,
+.pickupValue {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.bagFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-4);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bagPricing {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.originalPrice {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    text-decoration: line-through;
+}
+
+.salePrice {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.savingsTag {
+    padding: var(--spacing-1) var(--spacing-2);
+    background: rgba(232, 139, 195, 0.15);
+    color: var(--color-pink);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.emptyState {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-12);
+    color: var(--color-gray-500);
+}
+
+/* Price Section */
+.priceSection {
+    margin-bottom: var(--spacing-6);
+}
+
+.priceGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+    .priceGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.priceCard {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.priceIndicator {
+    width: 4px;
+    height: 40px;
+    border-radius: var(--radius-full);
+}
+
+.priceIndicator.success {
+    background: var(--color-success);
+}
+
+.priceIndicator.info {
+    background: var(--color-info);
+}
+
+.priceIndicator.warning {
+    background: var(--color-warning);
+}
+
+.priceIndicator.pink {
+    background: var(--color-pink);
+}
+
+.priceName {
+    display: block;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.priceRange {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+}

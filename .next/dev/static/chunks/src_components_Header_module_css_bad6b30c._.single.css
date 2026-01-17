@@ -1,0 +1,126 @@
+/* [project]/src/components/Header.module.css [app-client] (css) */
+.Header-module__hBw1pG__header {
+  height: var(--header-height);
+  padding: 0 var(--spacing-6);
+  background: var(--color-primary-bg);
+  z-index: 50;
+  border-bottom: 1px solid #ffffff0d;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.Header-module__hBw1pG__left {
+  gap: var(--spacing-1);
+  flex-direction: column;
+  display: flex;
+}
+
+.Header-module__hBw1pG__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  margin: 0;
+  font-weight: 600;
+}
+
+.Header-module__hBw1pG__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  margin: 0;
+}
+
+.Header-module__hBw1pG__right {
+  align-items: center;
+  gap: var(--spacing-4);
+  display: flex;
+}
+
+.Header-module__hBw1pG__search {
+  width: 280px;
+}
+
+.Header-module__hBw1pG__iconBtn {
+  border-radius: var(--radius-lg);
+  width: 40px;
+  height: 40px;
+  color: var(--color-gray-400);
+  transition: all var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.Header-module__hBw1pG__iconBtn:hover {
+  color: var(--color-white);
+  background: #ffffff0d;
+}
+
+.Header-module__hBw1pG__notificationDot {
+  background: var(--color-pink);
+  border: 2px solid var(--color-primary-bg);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.Header-module__hBw1pG__profile {
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  display: flex;
+}
+
+.Header-module__hBw1pG__profile:hover {
+  background: #ffffff0d;
+}
+
+.Header-module__hBw1pG__avatar {
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-leaf-dark) 100%);
+  width: 36px;
+  height: 36px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-bg);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Header-module__hBw1pG__profileInfo {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.Header-module__hBw1pG__profileName {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.Header-module__hBw1pG__profileRole {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+.Header-module__hBw1pG__profile svg {
+  color: var(--color-gray-500);
+  margin-left: var(--spacing-1);
+}
+
+@media (max-width: 768px) {
+  .Header-module__hBw1pG__search, .Header-module__hBw1pG__profileInfo {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=src_components_Header_module_css_bad6b30c._.single.css.map*/

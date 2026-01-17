@@ -1,0 +1,25 @@
+/* [project]/src/app/(dashboard)/layout.module.css [app-client] (css) */
+.layout-module__muyaCG__layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+.layout-module__muyaCG__main {
+  margin-left: var(--sidebar-width);
+  background: var(--color-primary-bg);
+  min-height: 100vh;
+  transition: margin-left var(--transition-normal);
+  flex: 1;
+}
+
+.sidebar.collapsed + .layout-module__muyaCG__main {
+  margin-left: 72px;
+}
+
+@media (max-width: 768px) {
+  .layout-module__muyaCG__main {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=src_app_%28dashboard%29_layout_module_css_bad6b30c._.single.css.map*/

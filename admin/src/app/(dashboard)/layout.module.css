@@ -1,0 +1,23 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    background: var(--color-primary-bg);
+    transition: margin-left var(--transition-normal);
+}
+
+/* When sidebar is collapsed */
+:global(.sidebar.collapsed)+.main {
+    margin-left: 72px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+    }
+}

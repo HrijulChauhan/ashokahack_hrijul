@@ -1,0 +1,183 @@
+[00:00:00.552] Server  LOG     ✓ Ready in 421ms
+[00:00:03.325] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:46.066] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:59.893] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:00.011] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="(dashboard...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function DashboardPage} serverProvidedParams={{...}}>
+            <DashboardPage params={Promise} searchParams={Promise}>
+              <Header title="Dashboard" subtitle={"Welcome ..."}>
+                <header className="Header-mod...">
+                  <div>
+                  <div className="Header-mod...">
+                    <div className="Header-mod...">
+                      <SearchInput placeholder="Search...">
+                        <Input type="search" placeholder="Search..." leftIcon={<svg>} onChange={function handleChange}>
+                          <div className={"Input-mo..."}>
+                            <div className={"Input-mo..."}>
+                              <span>
+                              <input
+                                ref={null}
++                               id="input-4lapni4"
+-                               id="input-pd2uaes"
+                                className={"Input-module__5jsJuW__input Input-module__5jsJuW__hasLeftIcon "}
+                                type="search"
+                                placeholder="Search..."
+                                onChange={function handleChange}
+                              >
+                    ...
+              ...
+        ...
+      ...
+
+[00:05:27.854] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:05:32.847] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:34.326] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:34.444] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rescue-bags" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+        <SegmentViewNode type="page" pagePath="(dashboard...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function RescueBagsPage} serverProvidedParams={{...}}>
+            <RescueBagsPage params={Promise} searchParams={Promise}>
+              <Header title="Rescue Bags" subtitle="Manage bag...">
+                <header className="Header-mod...">
+                  <div>
+                  <div className="Header-mod...">
+                    <div className="Header-mod...">
+                      <SearchInput placeholder="Search...">
+                        <Input type="search" placeholder="Search..." leftIcon={<svg>} onChange={function handleChange}>
+                          <div className={"Input-mo..."}>
+                            <div className={"Input-mo..."}>
+                              <span>
+                              <input
+                                ref={null}
++                               id="input-53wd1ea"
+-                               id="input-3l8sxj7"
+                                className={"Input-module__5jsJuW__input Input-module__5jsJuW__hasLeftIcon "}
+                                type="search"
+                                placeholder="Search..."
+                                onChange={function handleChange}
+                              >
+                    ...
+              ...
+        ...
+      ...
+
+[00:05:35.238] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:09:43.620] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:43.738] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/orders" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="(dashboard...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function OrdersPage} serverProvidedParams={{...}}>
+            <OrdersPage params={Promise} searchParams={Promise}>
+              <Header title="Orders" subtitle="Manage pic...">
+                <header className="Header-mod...">
+                  <div>
+                  <div className="Header-mod...">
+                    <div className="Header-mod...">
+                      <SearchInput placeholder="Search...">
+                        <Input type="search" placeholder="Search..." leftIcon={<svg>} onChange={function handleChange}>
+                          <div className={"Input-mo..."}>
+                            <div className={"Input-mo..."}>
+                              <span>
+                              <input
+                                ref={null}
++                               id="input-p6i1g5s"
+-                               id="input-y8zjqej"
+                                className={"Input-module__5jsJuW__input Input-module__5jsJuW__hasLeftIcon "}
+                                type="search"
+                                placeholder="Search..."
+                                onChange={function handleChange}
+                              >
+                    ...
+              ...
+        ...
+      ...
+
+[00:09:47.752] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:47.752] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/orders" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="(dashboard...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function OrdersPage} serverProvidedParams={{...}}>
+            <OrdersPage params={Promise} searchParams={Promise}>
+              <Header title="Orders" subtitle="Manage pic...">
+                <header className="Header-mod...">
+                  <div>
+                  <div className="Header-mod...">
+                    <div className="Header-mod...">
+                      <SearchInput placeholder="Search...">
+                        <Input type="search" placeholder="Search..." leftIcon={<svg>} onChange={function handleChange}>
+                          <div className={"Input-mo..."}>
+                            <div className={"Input-mo..."}>
+                              <span>
+                              <input
+                                ref={null}
++                               id="input-zpt12r7"
+-                               id="input-ghlxo6w"
+                                className={"Input-module__5jsJuW__input Input-module__5jsJuW__hasLeftIcon "}
+                                type="search"
+                                placeholder="Search..."
+                                onChange={function handleChange}
+                              >
+                    ...
+              ...
+        ...
+      ...
+
+[00:09:57.087] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

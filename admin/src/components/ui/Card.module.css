@@ -1,0 +1,110 @@
+.card {
+    background: var(--color-primary-bg-light);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-fast);
+}
+
+.hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/* Padding variants */
+.padding-none {
+    padding: 0;
+}
+
+.padding-sm {
+    padding: var(--spacing-3);
+}
+
+.padding-md {
+    padding: var(--spacing-5);
+}
+
+.padding-lg {
+    padding: var(--spacing-8);
+}
+
+/* Stat Card */
+.statCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    min-width: 200px;
+}
+
+.statHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.statTitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-400);
+    font-weight: 500;
+}
+
+.statIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-accent {
+    background: rgba(184, 224, 63, 0.15);
+    color: var(--color-accent);
+}
+
+.icon-pink {
+    background: rgba(232, 139, 195, 0.15);
+    color: var(--color-pink);
+}
+
+.icon-success {
+    background: rgba(74, 222, 128, 0.15);
+    color: var(--color-success);
+}
+
+.icon-warning {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--color-warning);
+}
+
+.icon-info {
+    background: rgba(96, 165, 250, 0.15);
+    color: var(--color-info);
+}
+
+.statValue {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.2;
+}
+
+.statChange {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-sm);
+}
+
+.positive {
+    color: var(--color-success);
+}
+
+.negative {
+    color: var(--color-error);
+}
+
+.changeLabel {
+    color: var(--color-gray-500);
+}

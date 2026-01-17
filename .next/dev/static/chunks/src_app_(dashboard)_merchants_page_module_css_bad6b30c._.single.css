@@ -1,0 +1,150 @@
+/* [project]/src/app/(dashboard)/merchants/page.module.css [app-client] (css) */
+.page-module__9FCzhG__container {
+  padding: var(--spacing-6);
+  max-width: 1400px;
+}
+
+.page-module__9FCzhG__statsRow {
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+
+@media (max-width: 768px) {
+  .page-module__9FCzhG__statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.page-module__9FCzhG__miniStat {
+  gap: var(--spacing-1);
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.page-module__9FCzhG__miniStatValue {
+  font-size: var(--font-size-2xl);
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.page-module__9FCzhG__miniStatLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+}
+
+.page-module__9FCzhG__toolbar {
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+  display: flex;
+}
+
+.page-module__9FCzhG__searchWrapper {
+  width: 320px;
+}
+
+@media (max-width: 640px) {
+  .page-module__9FCzhG__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-module__9FCzhG__searchWrapper {
+    width: 100%;
+  }
+}
+
+.page-module__9FCzhG__merchantCell {
+  align-items: center;
+  gap: var(--spacing-3);
+  display: flex;
+}
+
+.page-module__9FCzhG__merchantAvatar {
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink-light) 100%);
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-bg);
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__9FCzhG__merchantInfo {
+  flex-direction: column;
+  gap: 2px;
+  display: flex;
+}
+
+.page-module__9FCzhG__merchantName {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__9FCzhG__merchantEmail {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.page-module__9FCzhG__cityText {
+  color: var(--color-gray-300);
+}
+
+.page-module__9FCzhG__categoryBadge {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-300);
+  background: #ffffff0d;
+}
+
+.page-module__9FCzhG__statValue {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.page-module__9FCzhG__revenue {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.page-module__9FCzhG__rating {
+  align-items: center;
+  gap: var(--spacing-1);
+  display: flex;
+}
+
+.page-module__9FCzhG__ratingIcon {
+  color: var(--color-warning);
+}
+
+.page-module__9FCzhG__actions {
+  gap: var(--spacing-2);
+  display: flex;
+}
+
+.page-module__9FCzhG__actionBtn {
+  border-radius: var(--radius-md);
+  width: 32px;
+  height: 32px;
+  color: var(--color-gray-400);
+  transition: all var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.page-module__9FCzhG__actionBtn:hover {
+  color: var(--color-white);
+  background: #ffffff1a;
+}
+
+/*# sourceMappingURL=src_app_%28dashboard%29_merchants_page_module_css_bad6b30c._.single.css.map*/
