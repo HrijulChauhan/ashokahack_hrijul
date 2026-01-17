@@ -1,11 +1,12 @@
+import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { COLORS, SPACING, FONT_SIZES, BORDER_RADIUS } from '../constants/theme';
+import { COLORS, SPACING, BORDER_RADIUS, FONT_SIZES } from '../constants/theme';
 
 const tabs = [
-  { id: 'explore', label: 'Explore', icon: '🛍️', activeIcon: '🛍️' },
-  { id: 'favourites', label: 'Favourites', icon: '🤍', activeIcon: '💗' },
-  { id: 'profile', label: 'Profile', icon: '👤', activeIcon: '👤' },
+  { id: 'explore', label: 'Explore', icon: 'bag-handle-outline', activeIcon: 'bag-handle' },
+  { id: 'favourites', label: 'Favourites', icon: 'heart-outline', activeIcon: 'heart' },
+  { id: 'profile', label: 'Profile', icon: 'person-circle-outline', activeIcon: 'person-circle' },
 ];
 
 const BottomTabBar = ({ activeTab = 'explore', onTabPress }) => {
@@ -17,14 +18,19 @@ const BottomTabBar = ({ activeTab = 'explore', onTabPress }) => {
           return (
             <TouchableOpacity
               key={tab.id}
-              style={[styles.tab, isActive && styles.tabActive]}
+              style={styles.tab}
               onPress={() => onTabPress?.(tab.id)}
               activeOpacity={0.7}
             >
-              <Text style={[styles.tabIcon, isActive && styles.tabIconActive]}>
-                {isActive ? tab.activeIcon : tab.icon}
-              </Text>
-              <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>
+              <Ionicons
+                name={isActive ? tab.activeIcon : tab.icon}
+                size={24}
+                color={isActive ? COLORS.tabBarActive : COLORS.tabBarInactive}
+              />
+              <Text style={[
+                styles.tabLabel,
+                isActive && styles.tabLabelActive
+              ]}>
                 {tab.label}
               </Text>
             </TouchableOpacity>
@@ -38,46 +44,42 @@ const BottomTabBar = ({ activeTab = 'explore', onTabPress }) => {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    paddingHorizontal: SPACING.lg,
-    paddingBottom: SPACING.xl,
-    backgroundColor: COLORS.background,
+    bottom: SPACING.xl,
+    left: SPACING.lg,
+    right: SPACING.lg,
+    alignItems: 'center',
   },
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: COLORS.cardBackground,
-    borderRadius: BORDER_RADIUS.xxl,
-    paddingVertical: SPACING.sm,
-    paddingHorizontal: SPACING.md,
-    borderWidth: 1,
-    borderColor: COLORS.border,
+    backgroundColor: COLORS.tabBarBackground,
+    borderRadius: BORDER_RADIUS.full,
+    paddingVertical: SPACING.sm + 2,
+    paddingHorizontal: SPACING.lg,
+    borderWidth: 1.5,
+    borderColor: COLORS.tabBarBorder,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
+    width: '100%',
+    justifyContent: 'space-between',
   },
   tab: {
-    flex: 1,
+    paddingVertical: SPACING.xs,
+    paddingHorizontal: SPACING.md,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: SPACING.sm,
-    borderRadius: BORDER_RADIUS.xl,
-  },
-  tabActive: {
-    backgroundColor: COLORS.primaryAccent,
-  },
-  tabIcon: {
-    fontSize: 20,
-    marginBottom: 2,
-  },
-  tabIconActive: {
-    // Icon color change handled by different emoji
+    minWidth: 80,
   },
   tabLabel: {
-    fontSize: FONT_SIZES.xs,
-    color: COLORS.textSecondary,
-    fontWeight: '500',
+    fontSize: FONT_SIZES.md,
+    color: COLORS.tabBarInactive,
+    fontFamily: 'Saans', // Using the new font for labels
+    marginTop: 7,
   },
   tabLabelActive: {
-    color: COLORS.background,
+    color: COLORS.tabBarActive,
     fontWeight: '600',
   },
 });

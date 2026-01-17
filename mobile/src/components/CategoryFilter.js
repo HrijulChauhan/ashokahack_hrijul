@@ -20,9 +20,8 @@ const categoryEmojis = {
 };
 
 const CategoryCard = ({ category, isSelected, onPress }) => {
-  const image = categoryImages[category.id];
   const emoji = categoryEmojis[category.id] || '🍽️';
-  
+
   return (
     <TouchableOpacity
       style={[styles.categoryCard, isSelected && styles.categoryCardSelected]}
@@ -30,11 +29,9 @@ const CategoryCard = ({ category, isSelected, onPress }) => {
       activeOpacity={0.7}
     >
       <View style={styles.imageContainer}>
-        {image ? (
-          <Image source={image} style={styles.categoryImage} resizeMode="contain" />
-        ) : (
-          <Text style={styles.placeholderEmoji}>{emoji}</Text>
-        )}
+        <Text style={[styles.placeholderEmoji, isSelected && styles.placeholderEmojiSelected]}>
+          {emoji}
+        </Text>
       </View>
       <Text style={[styles.categoryText, isSelected && styles.categoryTextSelected]}>
         {category.name}
@@ -46,11 +43,7 @@ const CategoryCard = ({ category, isSelected, onPress }) => {
 const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => {
   return (
     <View style={styles.container}>
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}
-      >
+      <View style={styles.cardsWrapper}>
         {categories.map((category) => (
           <CategoryCard
             key={category.id}
@@ -59,57 +52,54 @@ const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => {
             onPress={onSelectCategory}
           />
         ))}
-      </ScrollView>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: SPACING.md,
-  },
-  scrollContent: {
+    marginVertical: SPACING.lg,
     paddingHorizontal: SPACING.lg,
-    gap: SPACING.md,
+  },
+  cardsWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   categoryCard: {
-    width: 85,
-    height: 110,
+    width: '23%', // Roughly 4 cards per row
+    aspectRatio: 0.85,
     borderRadius: BORDER_RADIUS.lg,
-    backgroundColor: COLORS.cardBackground,
+    backgroundColor: COLORS.inactiveCategory,
     alignItems: 'center',
-    justifyContent: 'flex-end',
-    paddingBottom: SPACING.sm,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-    overflow: 'hidden',
+    justifyContent: 'center',
+    padding: SPACING.xs,
   },
   categoryCardSelected: {
-    borderColor: COLORS.primaryAccent,
-    borderWidth: 2,
+    backgroundColor: COLORS.activeCategory,
   },
   imageContainer: {
     flex: 1,
-    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  categoryImage: {
-    width: 60,
-    height: 60,
-  },
   placeholderEmoji: {
     fontSize: 40,
+    opacity: 0.8,
+  },
+  placeholderEmojiSelected: {
+    opacity: 1,
   },
   categoryText: {
-    fontSize: FONT_SIZES.sm,
-    color: COLORS.primaryAccent,
+    fontSize: FONT_SIZES.md,
+    color: COLORS.inactiveCategoryText,
+    fontFamily: 'Gargoyle',
     fontWeight: '600',
-    marginTop: SPACING.xs,
+    marginBottom: SPACING.xs,
   },
   categoryTextSelected: {
-    color: COLORS.primaryAccent,
-    fontWeight: '700',
+    color: COLORS.activeCategoryText,
   },
 });
 

@@ -1,35 +1,73 @@
-// Theme constants for Rescue Bag App
-// Dark green theme matching the design
+// Theme constants
+// - [x] Redesign `CategoryFilter` component
+// - [x] Adjust `HomeScreen` layout
+// - [ ] Redesign `BottomTabBar` component
+// - [ ] Verify UI matches the attached images
+
+// #### [MODIFY] [CategoryFilter.js](file:///Users/arhaanb/projects/spare-admin/mobile/src/components/CategoryFilter.js)
+// - Update the category card design:
+//   - Active state: Light green background (`#C6F04D`), dark text/icon (`#0A3522`).
+//   - Inactive state: Dark green background (`#134631`), light green text/outlines (`#C6F04D`).
+// - Adjust dimensions and spacing to match the square-ish layout in the image.
+
+// #### [MODIFY] [BottomTabBar.js](file:///Users/arhaanb/projects/spare-admin/mobile/src/components/BottomTabBar.js)
+// - Redesign the tab bar to be a floating pill:
+//   - Background: Very dark grey/black (`#1A1A1B`).
+//   - Border: Thin light green border (`#C6F04D`).
+//   - Shape: Pill-shaped (high border radius).
+//   - Colors: Active tab in light green (`#C6F04D`), inactive in grey.
 
 export const COLORS = {
   // Primary colors
-  background: '#0A1F13',
-  cardBackground: '#132A1B',
+  background: '#0A3522',
+  cardBackground: '#085420',
   primaryAccent: '#22C55E',
-  
+
+  // Header and Category specific
+  headerBox: '#134631',
+  locationText: '#E6A9FF', // Pink-ish color from image
+  activeCategory: '#C6F04D', // Light green from image
+  activeCategoryText: '#0A3522',
+  inactiveCategory: '#134631',
+  inactiveCategoryText: '#C6F04D',
+
+  // Tab Bar
+  tabBarBackground: '#161616',
+  tabBarBorder: '#2D4A38',
+  tabBarActive: '#C6F04D',
+  tabBarInactive: '#666666',
+
   // Text colors
   textPrimary: '#FFFFFF',
   textSecondary: '#9CA3AF',
   textMuted: '#6B7280',
-  
+
+  // Font Families
+  fontSerif: 'Gargoyle',
+  fontSans: 'Saans',
+  fontSansBold: 'Saans-Bold',
+  fontSansMedium: 'Saans-Medium',
+  fontSansSemiBold: 'Saans-SemiBold',
+  fontSansLight: 'Saans-Light',
+
   // Border and outlines
   border: '#1E3A28',
   borderLight: '#2D4A38',
-  
+
   // Status colors
   success: '#22C55E',
   warning: '#F59E0B',
   error: '#EF4444',
-  
+
   // Badge colors
   badgeDefault: '#22C55E',
   badgeSecondary: '#1E3A28',
   badgeOutline: 'transparent',
-  
+
   // Rating
   starActive: '#F59E0B',
   starInactive: '#374151',
-  
+
   // Overlay
   overlay: 'rgba(0, 0, 0, 0.5)',
 };

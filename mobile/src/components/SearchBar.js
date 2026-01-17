@@ -1,18 +1,17 @@
 import React from 'react';
-import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { COLORS, SPACING, FONT_SIZES, BORDER_RADIUS } from '../constants/theme';
 
-const SearchBar = ({ 
-  value, 
-  onChangeText, 
+const SearchBar = ({
+  value,
+  onChangeText,
   placeholder = "Search menu, restaurant or etc",
-  onFilterPress 
+  onFilterPress
 }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.searchIcon}>
-        <Text style={styles.searchIconText}>🔍</Text>
-      </View>
+      <Ionicons name="search" size={20} color={COLORS.textSecondary} style={styles.searchIcon} />
       <TextInput
         style={styles.input}
         value={value}
@@ -21,7 +20,7 @@ const SearchBar = ({
         placeholderTextColor={COLORS.textMuted}
       />
       <TouchableOpacity style={styles.filterButton} onPress={onFilterPress}>
-        <Text style={styles.filterIcon}>☰</Text>
+        <Ionicons name="options-outline" size={20} color={COLORS.textSecondary} />
       </TouchableOpacity>
     </View>
   );
@@ -31,37 +30,29 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: COLORS.cardBackground,
-    borderRadius: BORDER_RADIUS.xxl,
+    backgroundColor: 'rgba(255, 255, 255, 0.05)', // Subtle transparent background
+    borderRadius: BORDER_RADIUS.full,
     marginHorizontal: SPACING.lg,
-    marginVertical: SPACING.md,
-    paddingHorizontal: SPACING.md,
-    height: 50,
-    borderWidth: 1,
-    borderColor: COLORS.border,
+    marginVertical: SPACING.lg,
+    paddingHorizontal: SPACING.lg,
+    height: 56,
+    borderWidth: 1.5,
+    borderColor: '#33443C', // Dark border
   },
   searchIcon: {
     marginRight: SPACING.sm,
-  },
-  searchIconText: {
-    fontSize: 18,
-    opacity: 0.5,
+    opacity: 0.6,
   },
   input: {
     flex: 1,
     fontSize: FONT_SIZES.md,
     color: COLORS.textPrimary,
+    fontFamily: 'Saans', // Using Saans for body/input
     paddingVertical: SPACING.sm,
   },
   filterButton: {
-    width: 32,
-    height: 32,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  filterIcon: {
-    fontSize: 18,
-    color: COLORS.textSecondary,
+    marginLeft: SPACING.sm,
+    opacity: 0.8,
   },
 });
 
