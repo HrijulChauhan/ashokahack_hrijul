@@ -34,9 +34,11 @@ export function Sidebar() {
                 <div className="flex items-center justify-center shrink-0">
                     <img src="/logo.svg" alt="Spare" className="w-9 h-9" />
                 </div>
-                <div className="flex flex-col gap-0.5">
+                <div className="flex flex-col">
+                    {/* Label in serif, muted */}
+                    <span className="text-xs text-muted-foreground font-serif">Powered by Spare</span>
+                    {/* Name in sans, pink */}
                     <span className="text-lg font-semibold text-pink truncate">{restaurantName}</span>
-                    <span className="text-xs text-muted-foreground font-serif italic">Powered by Spare</span>
                 </div>
             </div>
 

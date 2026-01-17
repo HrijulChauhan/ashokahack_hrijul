@@ -80,16 +80,16 @@ export default function LoginPage() {
                     <div className="inline-flex items-center justify-center mb-4">
                         <img src="/logo.svg" alt="Spare" className="w-12 h-12" />
                     </div>
-                    {/* App name in sans, accent */}
                     <h1 className="text-3xl font-bold text-accent">Spare</h1>
-                    {/* Restaurant in pink */}
                     <p className="text-lg text-pink mt-1">Baker&apos;s Oven</p>
                 </div>
 
                 <Card className="bg-spare-bg-light/80 backdrop-blur-sm border-white/10">
                     <CardHeader className="text-center pb-2">
-                        <CardTitle className="text-xl text-white">Sign In</CardTitle>
-                        <CardDescription>Enter your credentials to continue</CardDescription>
+                        {/* Label in serif */}
+                        <CardDescription className="font-serif">Sign in to your dashboard</CardDescription>
+                        {/* Title in sans, white */}
+                        <CardTitle className="text-xl text-white">Welcome Back</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <form onSubmit={handleLogin} className="space-y-4">
@@ -184,8 +184,8 @@ export default function LoginPage() {
                     </CardContent>
                 </Card>
 
-                <p className="text-center text-xs text-muted-foreground font-serif italic mt-6">
-                    Powered by <span className="text-accent font-sans font-medium not-italic">Spare</span> • Food Rescue Marketplace
+                <p className="text-center text-xs text-muted-foreground font-serif mt-6">
+                    Powered by <span className="text-accent font-sans font-medium">Spare</span> • Food Rescue Marketplace
                 </p>
             </div>
         </div>

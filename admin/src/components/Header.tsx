@@ -29,10 +29,12 @@ export function Header({ title, subtitle }: HeaderProps) {
     return (
         <header className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-spare-bg/80 backdrop-blur-sm sticky top-0 z-40">
             <div>
-                <h1 className="text-xl font-semibold text-white">{title}</h1>
+                {/* Label in serif, muted */}
                 {subtitle && (
-                    <p className="text-sm text-muted-foreground font-serif italic mt-0.5">{subtitle}</p>
+                    <p className="text-sm text-muted-foreground font-serif">{subtitle}</p>
                 )}
+                {/* Title in sans, pink */}
+                <h1 className="text-xl font-semibold text-pink">{title}</h1>
             </div>
 
             <div className="flex items-center gap-4">
