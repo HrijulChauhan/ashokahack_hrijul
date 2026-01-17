@@ -78,25 +78,8 @@ export default function LoginPage() {
                 {/* Logo */}
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center mb-4">
-                        <svg width="48" height="48" viewBox="0 0 40 40" fill="none">
-                            <path
-                                d="M8 12C8 10 10 8 12 8H28C30 8 32 10 32 12V32C32 34 30 36 28 36H12C10 36 8 34 8 32V12Z"
-                                fill="#E88BC3"
-                            />
-                            <path
-                                d="M14 8V6C14 4 16 2 20 2C24 2 26 4 26 6V8"
-                                stroke="#E88BC3"
-                                strokeWidth="3"
-                                strokeLinecap="round"
-                            />
-                            <path
-                                d="M20 28C20 28 14 22 14 18C14 15 16 14 18 14C19 14 20 15 20 16C20 15 21 14 22 14C24 14 26 15 26 18C26 22 20 28 20 28Z"
-                                fill="#0D3B2E"
-                            />
-                        </svg>
+                        <img src="/logo.svg" alt="Spare" className="w-12 h-12" />
                     </div>
-                    {/* Brand in serif, muted */}
-                    <p className="text-sm text-muted-foreground font-serif mb-1">Food Rescue Dashboard</p>
                     {/* App name in sans, accent */}
                     <h1 className="text-3xl font-bold text-accent">Spare</h1>
                     {/* Restaurant in pink */}
@@ -105,8 +88,8 @@ export default function LoginPage() {
 
                 <Card className="bg-spare-bg-light/80 backdrop-blur-sm border-white/10">
                     <CardHeader className="text-center pb-2">
-                        <CardTitle className="text-xl text-white font-sans">Sign In</CardTitle>
-                        <CardDescription className="font-serif">Enter your credentials to continue</CardDescription>
+                        <CardTitle className="text-xl text-white">Sign In</CardTitle>
+                        <CardDescription>Enter your credentials to continue</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <form onSubmit={handleLogin} className="space-y-4">
@@ -153,7 +136,7 @@ export default function LoginPage() {
 
                             <Button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-pink to-accent hover:from-pink-hover hover:to-accent-hover text-spare-bg font-semibold h-11"
+                                className="w-full bg-pink hover:bg-pink-hover text-spare-bg font-semibold h-11"
                                 disabled={loading}
                             >
                                 {loading ? (
@@ -201,8 +184,8 @@ export default function LoginPage() {
                     </CardContent>
                 </Card>
 
-                <p className="text-center text-xs text-muted-foreground mt-6 font-serif">
-                    Powered by <span className="text-accent font-sans font-medium">Spare</span> • Food Rescue Marketplace
+                <p className="text-center text-xs text-muted-foreground font-serif italic mt-6">
+                    Powered by <span className="text-accent font-sans font-medium not-italic">Spare</span> • Food Rescue Marketplace
                 </p>
             </div>
         </div>

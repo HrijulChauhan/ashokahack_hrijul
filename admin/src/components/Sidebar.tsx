@@ -32,28 +32,11 @@ export function Sidebar() {
             {/* Restaurant Logo/Name */}
             <div className="flex items-center gap-3 p-5 mb-4">
                 <div className="flex items-center justify-center shrink-0">
-                    <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                        <path
-                            d="M8 12C8 10 10 8 12 8H28C30 8 32 10 32 12V32C32 34 30 36 28 36H12C10 36 8 34 8 32V12Z"
-                            fill="#E88BC3"
-                        />
-                        <path
-                            d="M14 8V6C14 4 16 2 20 2C24 2 26 4 26 6V8"
-                            stroke="#E88BC3"
-                            strokeWidth="3"
-                            strokeLinecap="round"
-                        />
-                        <path
-                            d="M20 28C20 28 14 22 14 18C14 15 16 14 18 14C19 14 20 15 20 16C20 15 21 14 22 14C24 14 26 15 26 18C26 22 20 28 20 28Z"
-                            fill="#0D3B2E"
-                        />
-                    </svg>
+                    <img src="/logo.svg" alt="Spare" className="w-9 h-9" />
                 </div>
                 <div className="flex flex-col gap-0.5">
-                    {/* Brand name in serif, muted */}
-                    <span className="text-xs text-muted-foreground font-serif">Powered by Spare</span>
-                    {/* Restaurant name in sans-serif, pink */}
-                    <span className="text-lg font-bold text-pink truncate">{restaurantName}</span>
+                    <span className="text-lg font-semibold text-pink truncate">{restaurantName}</span>
+                    <span className="text-xs text-muted-foreground font-serif italic">Powered by Spare</span>
                 </div>
             </div>
 

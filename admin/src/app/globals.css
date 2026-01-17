@@ -124,16 +124,6 @@
   [role="button"] {
     cursor: pointer;
   }
-
-  /* Heading styles - serif font with pink color for hierarchy */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-serif);
-  }
 }
 
 /* Utility classes for fonts */

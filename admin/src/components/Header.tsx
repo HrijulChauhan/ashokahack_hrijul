@@ -29,12 +29,10 @@ export function Header({ title, subtitle }: HeaderProps) {
     return (
         <header className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-spare-bg/80 backdrop-blur-sm sticky top-0 z-40">
             <div>
-                {/* Subtitle in serif, muted color */}
+                <h1 className="text-xl font-semibold text-white">{title}</h1>
                 {subtitle && (
-                    <p className="text-sm text-muted-foreground font-serif mb-0.5">{subtitle}</p>
+                    <p className="text-sm text-muted-foreground font-serif italic mt-0.5">{subtitle}</p>
                 )}
-                {/* Title in sans-serif, pink for prominence */}
-                <h1 className="text-xl font-semibold text-pink font-sans">{title}</h1>
             </div>
 
             <div className="flex items-center gap-4">
@@ -42,7 +40,7 @@ export function Header({ title, subtitle }: HeaderProps) {
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="ghost" className="flex items-center gap-2 text-white hover:bg-white/5">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink to-accent/50 flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-full bg-pink flex items-center justify-center">
                                 <User className="w-4 h-4 text-spare-bg" />
                             </div>
                             <span className="text-sm font-medium hidden sm:block">
