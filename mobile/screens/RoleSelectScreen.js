@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { width } = Dimensions.get('window');
 
 export default function RoleSelectScreen({ navigation }) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Mystery Bag</Text>
       
       <TouchableOpacity 
@@ -14,7 +15,7 @@ export default function RoleSelectScreen({ navigation }) {
       >
         <Text style={styles.buttonText}>I'm a Student</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 

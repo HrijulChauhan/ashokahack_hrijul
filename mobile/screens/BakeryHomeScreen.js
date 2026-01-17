@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function BakeryHomeScreen({ navigation }) {
   const [currentListing, setCurrentListing] = useState(null);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Your Dashboard</Text>
       
       {currentListing ? (
@@ -26,7 +27,7 @@ export default function BakeryHomeScreen({ navigation }) {
       >
         <Text style={styles.createButtonText}>Create Mystery Bag</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 

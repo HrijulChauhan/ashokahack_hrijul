@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function BagDetailScreen({ route, navigation }) {
   const { bag } = route.params;
@@ -14,7 +15,7 @@ export default function BagDetailScreen({ route, navigation }) {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollContent}>
         <View style={styles.header}>
           <Text style={styles.restaurantName}>{bag.restaurant}</Text>
@@ -40,7 +41,7 @@ export default function BagDetailScreen({ route, navigation }) {
       <TouchableOpacity style={styles.reserveButton} onPress={handleReserve}>
         <Text style={styles.reserveButtonText}>Reserve</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 

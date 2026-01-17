@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, SPACING, FONT_SIZES, BORDER_RADIUS, SHADOWS } from '../constants/theme';
 import { Button } from '../components';
 import { formatPickupTime, calculateSavingsPercent } from '../data/mockData';
@@ -20,7 +21,7 @@ const ReservationScreen = ({ route, navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.successIcon}>
           <Text style={styles.checkmark}>✓</Text>
@@ -95,7 +96,7 @@ const ReservationScreen = ({ route, navigation }) => {
           style={styles.doneButton}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

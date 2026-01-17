@@ -1,26 +1,29 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { mockBags } from '../data/mockData';
 
 export default function StudentHomeScreen({ navigation }) {
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.sectionTitle}>PICKUP NOW</Text>
-      
-      {mockBags.map((item) => (
-        <TouchableOpacity 
-          key={item.id}
-          style={styles.card}
-          onPress={() => navigation.navigate('BagDetail', { bag: item })}
-        >
-          <View style={styles.cardContent}>
-            <Text style={styles.restaurantName}>{item.restaurant}</Text>
-            <Text style={styles.priceNew}>₹{item.price}</Text>
-            <Text style={styles.infoText}>{item.distance} • {item.pickupTime}</Text>
-          </View>
-        </TouchableOpacity>
-      ))}
-    </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+        <Text style={styles.sectionTitle}>PICKUP NOW</Text>
+        
+        {mockBags.map((item) => (
+          <TouchableOpacity 
+            key={item.id}
+            style={styles.card}
+            onPress={() => navigation.navigate('BagDetail', { bag: item })}
+          >
+            <View style={styles.cardContent}>
+              <Text style={styles.restaurantName}>{item.restaurant}</Text>
+              <Text style={styles.priceNew}>₹{item.price}</Text>
+              <Text style={styles.infoText}>{item.distance} • {item.pickupTime}</Text>
+            </View>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -28,6 +31,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
+  },
+  scrollView: {
+    flex: 1,
   },
   sectionTitle: {
     fontSize: 14,

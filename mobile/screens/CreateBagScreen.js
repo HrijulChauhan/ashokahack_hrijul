@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function CreateBagScreen({ navigation }) {
   const [price, setPrice] = useState('');
@@ -18,7 +19,7 @@ export default function CreateBagScreen({ navigation }) {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Create Mystery Bag</Text>
       
       <Text style={styles.label}>Price (₹)</Text>
@@ -36,7 +37,7 @@ export default function CreateBagScreen({ navigation }) {
       >
         <Text style={styles.goLiveButtonText}>Go Live</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 
