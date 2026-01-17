@@ -1,35 +1,41 @@
-import React, { useState } from 'react';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import RoleSelectScreen from './screens/RoleSelectScreen';
-import StudentHomeScreen from './screens/StudentHomeScreen';
-import BagDetailScreen from './screens/BagDetailScreen';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
+
+import { HomeScreen, RestaurantDetailScreen, ReservationScreen } from './src/screens';
+import { COLORS } from './src/constants/theme';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [currentScreen, setCurrentScreen] = useState('RoleSelect');
-  const [selectedBag, setSelectedBag] = useState(null);
-
-  // Manual navigation function
-  const navigate = (screen, params = {}) => {
-    if (params.bag) setSelectedBag(params.bag);
-    setCurrentScreen(screen);
-  };
-
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
-        {currentScreen === 'RoleSelect' && (
-          <RoleSelectScreen navigation={{ navigate }} />
-        )}
-        {currentScreen === 'StudentHome' && (
-          <StudentHomeScreen navigation={{ navigate }} />
-        )}
-        {currentScreen === 'BagDetail' && (
-          <BagDetailScreen 
-            route={{ params: { bag: selectedBag } }} 
-            navigation={{ navigate, goBack: () => setCurrentScreen('StudentHome') }} 
+      <NavigationContainer>
+        <StatusBar style="light" />
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerShown: false,
+            contentStyle: { backgroundColor: COLORS.background },
+            animation: 'slide_from_right',
+          }}
+        >
+          <Stack.Screen 
+            name="Home" 
+            component={HomeScreen}
           />
-        )}
-      </SafeAreaView>
+          <Stack.Screen 
+            name="RestaurantDetail" 
+            component={RestaurantDetailScreen}
+          />
+          <Stack.Screen 
+            name="Reservation" 
+            component={ReservationScreen}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 }

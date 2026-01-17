@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "ashoka_hack",
-    "slug": "ashoka_hack",
+    "name": "Rescue Bag",
+    "slug": "rescue-bag",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0A1F13"
     },
     "ios": {
       "supportsTablet": true
@@ -17,8 +17,11 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0A1F13"
       }
+    },
+    "web": {
+      "bundler": "metro"
     }
   }
 }
