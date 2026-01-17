@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { Order } from "@/lib/types";
 import { mockOrders, formatCurrency, getCategoryLabel, formatTime } from "@/lib/mockData";
 import { User, Package } from "lucide-react";

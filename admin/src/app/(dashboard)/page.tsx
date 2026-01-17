@@ -1,7 +1,7 @@
 "use client";
 
 import { Header } from "@/components/Header";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import {
     mockRestaurantStats,
     mockDailyStats,
@@ -15,7 +15,7 @@ import {
     Clock,
     ArrowRight
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
 
 export default function DashboardPage() {
